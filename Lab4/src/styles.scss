@@ -1,0 +1,68 @@
+//font sizes 
+$big-font: 25px; 
+$med-font: 20px;
+$small-font: 18px; 
+
+//colour 
+$light-grey: lightgrey;
+
+
+.page-wrapper{
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+li {
+    list-style-type: none;
+
+    &:hover {
+        background-color: $light-grey;
+    }
+}
+
+header{
+    nav{
+        .links{ //<ul>
+
+            > li{
+                display: inline;
+                position:relative;
+                font-size: $big-font;
+
+                .nested-links{
+                    padding-left: 0;
+                    position: absolute;
+                    left:0;
+                    top: 100%;
+                    width: 150%;
+                    display: none; 
+                    font-size: $med-font;
+                    
+                    li{ 
+                        position: relative; 
+
+                        .sublinks{
+                            position: absolute;
+                            left: 100%;
+                            top:0%; 
+                            display: none;
+                            font-size: $small-font;
+                            width: 200%;
+                        }
+                        &:hover > .sublinks{
+                            display: block;
+                        }
+                    }
+                }
+                &:hover > .nested-links{
+                    display:inline-block;
+                }
+            }
+            //<li>
+
+            //</li>
+
+        }
+   
+    }
+}
